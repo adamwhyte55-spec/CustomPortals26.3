@@ -3,7 +3,6 @@ package dev.custom.portals.blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mojang.serialization.MapCodec;
 import dev.custom.portals.CustomPortals;
 import dev.custom.portals.data.CustomPortal;
 import net.minecraft.world.level.block.Block;
@@ -25,18 +24,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 
 public class AbstractRuneBlock extends FaceAttachedHorizontalDirectionalBlock {
-    public static final MapCodec<AbstractRuneBlock> CODEC = simpleCodec(AbstractRuneBlock::new);
     protected static final VoxelShape CEILING_SHAPE;
     protected static final VoxelShape FLOOR_SHAPE;
     protected static final VoxelShape NORTH_SHAPE;
     protected static final VoxelShape SOUTH_SHAPE;
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape EAST_SHAPE;
-
-    @Override
-    public MapCodec<? extends AbstractRuneBlock> codec() {
-        return CODEC;
-    }
 
     protected AbstractRuneBlock(BlockBehaviour.Properties settings) {
         super(settings);

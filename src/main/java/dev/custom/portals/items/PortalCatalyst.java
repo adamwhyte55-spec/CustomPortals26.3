@@ -25,7 +25,7 @@ public class PortalCatalyst extends Item {
     public InteractionResult useOn(UseOnContext ctx) {
         Player playerEntity = ctx.getPlayer();
         Level world = ctx.getLevel();
-        BlockPos pos = new BlockPos(ctx.getClickedPos());
+        BlockPos pos = ctx.getClickedPos();
         Direction dir = ctx.getClickedFace();
         pos = switch (dir) {
             case NORTH -> pos.north();

@@ -14,7 +14,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.Level;
 
 import java.util.*;
@@ -121,7 +120,7 @@ public class PortalHelper {
                 if (length % 2 != 0) offsetX = 0.5f;
             }
         }
-        BlockPos spawnPos = new BlockPos(new Vec3i(trueXSpawn, trueYSpawn, trueZSpawn));
+        BlockPos spawnPos = new BlockPos(trueXSpawn, trueYSpawn, trueZSpawn);
         //System.out.println(CustomPortals.blockPosToString(spawnPos));
         return new SpawnPosData(spawnPos, offsetX, offsetZ);
     }
