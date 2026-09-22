@@ -8,7 +8,6 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.custom.portals.config.CPSettings;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
 
 public class CustomPortal {
 
@@ -230,14 +229,14 @@ public class CustomPortal {
                     if (portal.getDimensionId().equals("minecraft:the_nether")) {
                         int translatedX = portal.getSpawnPos().getX() * 8;
                         int translatedZ = portal.getSpawnPos().getZ() * 8;
-                        BlockPos translatedSpawnPos = new BlockPos(new Vec3i(
-                                translatedX, portal.getSpawnPos().getY(), translatedZ));
+                        BlockPos translatedSpawnPos = new BlockPos(
+                                translatedX, portal.getSpawnPos().getY(), translatedZ);
                         distance = distance(spawnPos, translatedSpawnPos);
                     } else if (this.dimensionId.equals("minecraft:the_nether")) {
                         int translatedX = spawnPos.getX() * 8;
                         int translatedZ = spawnPos.getZ() * 8;
-                        BlockPos translatedSpawnPos = new BlockPos(new Vec3i(
-                                translatedX, spawnPos.getY(), translatedZ));
+                        BlockPos translatedSpawnPos = new BlockPos(
+                                translatedX, spawnPos.getY(), translatedZ);
                         distance = distance(translatedSpawnPos, portal.getSpawnPos());
                     } else distance = distance(spawnPos, portal.getSpawnPos());
                 } else distance = distance(spawnPos, portal.getSpawnPos());
