@@ -13,20 +13,20 @@ repositories {
         url = 'https://maven.ladysnake.org/releases'
     }
 	maven {
-        url 'https://jitpack.io'
+        url = 'https://jitpack.io'
     }
     maven {
-        url "https://maven.shedaniel.me/"
+        url = "https://maven.shedaniel.me/"
     }
     maven {
-        url "https://maven.terraformersmc.com/"
+        url = "https://maven.terraformersmc.com/"
     }
 	maven {
-		url "https://maven.siphalor.de/"
+		url = "https://maven.siphalor.de/"
 	}
 	maven {
-		name 'Xander Maven'
-		url 'https://maven.isxander.dev/releases'
+		name = 'Xander Maven'
+		url = 'https://maven.isxander.dev/releases'
 	}
 
 }
