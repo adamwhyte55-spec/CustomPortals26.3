@@ -19,14 +19,14 @@ repositories {
         url "https://maven.shedaniel.me/"
     }
     maven {
-        url "https://maven.terraformersmc.com/"
+        url "https://mvnrepository.com/artifact/com.terraformersmc"
     }
 	maven {
 		url "https://maven.siphalor.de/"
 	}
 	maven {
 		name 'Xander Maven'
-		url 'https://maven.isxander.dev/releases'
+		url 'https://maven.isxander.dev/web/releases/'
 	}
 
 }
